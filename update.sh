@@ -3,4 +3,6 @@
 
 ls -al
 pwd
-printenv
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get install python -y
+

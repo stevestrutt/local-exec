@@ -8,11 +8,8 @@
 # Create VM configured to for SSH remote access
 ########################################################
 
-resource "null_resource" "webapp1" {  
+resource "null_resource" "webapp1" {
   provisioner "local-exec" {
     command = "./update.sh"
   }
-
 }
-
-
