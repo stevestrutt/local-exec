@@ -20,5 +20,5 @@ data "ibm_schematics_workspace" "test" {
 
 data "ibm_schematics_state" "test" {
   workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
-  template_id  = "${data.ibm_schematics_workspace.test.template_id}"
+  template_id  = "${data.ibm_schematics_workspace.test.template_id.0}"
 }
