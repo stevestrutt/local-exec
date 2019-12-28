@@ -35,7 +35,7 @@ data "ibm_schematics_state" "test" {
   template_id  = "fbb5d752-b0cc-4f"
 }
 
-output "StateStore Values" {
+output "StateStoreValues" {
   value = "${data.ibm_schematics_state.test.state_store}"
 }
 
