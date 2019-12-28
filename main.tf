@@ -18,8 +18,25 @@ data "ibm_schematics_workspace" "test" {
   workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
 }
 
+output "TemplateID" {
+  value = "${data.ibm_schematics_workspace.test.template_id}"
+}
+
+output "Name" {
+  value = "${data.ibm_schematics_workspace.test.name}"
+}
+
+output "Tags" {
+  value = "${data.ibm_schematics_workspace.test.tags}"
+}
+
 # data "ibm_schematics_state" "test" {
 #   workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
 #   template_id  = "${data.ibm_schematics_workspace.test.template_id.0}"
+# }
+
+
+# output "StateStore Values" {
+#   value = "${data.ibm_schematics_state.test.state_store}"
 # }
 
