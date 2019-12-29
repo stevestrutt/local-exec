@@ -39,5 +39,9 @@ output "StateStoreValues" {
   value = "${data.ibm_schematics_state.test.state_store}"
 }
 
+output "hostname" {
+  value = "${data.ibm_schematics_state.test.state_store.ibm_compute_vm_instance.webapp1.hostname}"
+}
+
 #   template_id  = "${data.ibm_schematics_workspace.test.template_id.0}"
 
