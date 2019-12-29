@@ -35,13 +35,24 @@ data "ibm_schematics_state" "test" {
   template_id  = "fbb5d752-b0cc-4f"
 }
 
-output "StateStoreValues" {
-  value = "${data.ibm_schematics_state.test.state_store}"
+data "ibm_schematics_output" "test" {
+  workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
+  template_id  = "fbb5d752-b0cc-4f"
 }
 
-output "hostname" {
-  value = "${data.ibm_schematics_state.test.state_store.ibm_compute_vm_instance.webapp1.hostname}"
+output "Output_vars" {
+  value = "${data.ibm_schematics_output.test.output_values}"
 }
+
+# output "StateStoreValues" {
+#   value = "${data.ibm_schematics_state.test.state_store}"
+# }
+
+
+# output "hostname" {
+#   value = "${data.ibm_schematics_state.test.state_store.ibm_compute_vm_instance.webapp1.hostname}"
+# }
+
 
 #     template_id  = "${data.ibm_schematics_workspace.test.template_id.0}"
 
