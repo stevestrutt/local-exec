@@ -45,7 +45,7 @@ output "Output_vars" {
 }
 
 output "RemoteHostName" {
-  value = "${data.ibm_schematics_output.test.output_values.}"
+  value = "${data.ibm_schematics_output.test.output_values.hostname}"
 }
 
 # output "StateStoreValues" {
@@ -57,7 +57,13 @@ output "RemoteHostName" {
 # }
 
 #     template_id  = "${data.ibm_schematics_workspace.test.template_id.0}"
+
 variable ssh_label {
   description = "ssh label"
   default     = "wcpclouduk1"
+}
+
+variable interpolation {
+  description = "intepolated value"
+  default     = "${data.ibm_schematics_output.test.output_values.hostname}"
 }
