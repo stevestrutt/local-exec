@@ -30,23 +30,27 @@ output "Tags" {
   value = "${data.ibm_schematics_workspace.test.tags}"
 }
 
-data "ibm_schematics_state" "test" {
-  workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
-  template_id  = "fbb5d752-b0cc-4f"
-}
+# data "ibm_schematics_state" "test" {
+#   workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
+#   template_id  = "fbb5d752-b0cc-4f"
+# }
 
-data "ibm_schematics_output" "test" {
-  workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
-  template_id  = "fbb5d752-b0cc-4f"
-}
 
-output "Output_vars" {
-  value = "${data.ibm_schematics_output.test.output_values}"
-}
+# data "ibm_schematics_output" "test" {
+#   workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
+#   template_id  = "fbb5d752-b0cc-4f"
+# }
 
-output "RemoteHostName" {
-  value = "${data.ibm_schematics_output.test.output_values.hostname}"
-}
+
+# output "Output_vars" {
+#   value = "${data.ibm_schematics_output.test.output_values}"
+# }
+
+
+# output "RemoteHostName" {
+#   value = "${data.ibm_schematics_output.test.output_values.hostname}"
+# }
+
 
 # output "StateStoreValues" {
 #   value = "${data.ibm_schematics_state.test.state_store}"
