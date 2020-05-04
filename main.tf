@@ -14,23 +14,23 @@ resource "null_resource" "webapp1" {
   }
 }
 
-data "ibm_schematics_workspace" "test" {
-  workspace_id = "apache-03-31-2020-mujeeb-739e8590-b49f-47"
-  #workspace_id = "myworkspace-4may1-6a4d3963-a74d-4c"
-  #workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
-}
+# data "ibm_schematics_workspace" "test" {
+#   workspace_id = "apache-03-31-2020-mujeeb-739e8590-b49f-47"
+#   #workspace_id = "myworkspace-4may1-6a4d3963-a74d-4c"
+#   #workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
+# }
 
-output "TemplateID" {
-  value = "${data.ibm_schematics_workspace.test.template_id}"
-}
+# output "TemplateID" {
+#   value = "${data.ibm_schematics_workspace.test.template_id}"
+# }
 
-output "Name" {
-  value = "${data.ibm_schematics_workspace.test.name}"
-}
+# output "Name" {
+#   value = "${data.ibm_schematics_workspace.test.name}"
+# }
 
-output "Tags" {
-  value = "${data.ibm_schematics_workspace.test.tags}"
-}
+# output "Tags" {
+#   value = "${data.ibm_schematics_workspace.test.tags}"
+# }
 
 # data "ibm_schematics_state" "test" {
 #   workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
