@@ -15,7 +15,8 @@ resource "null_resource" "webapp1" {
 }
 
 data "ibm_schematics_workspace" "test" {
-  workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
+  workspace_id = "myworkspace-4may1-6a4d3963-a74d-4c"
+  #workspace_id = "remote-exec-vsi-e4d93b50-33ed-43"
 }
 
 output "TemplateID" {
