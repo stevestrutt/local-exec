@@ -10,7 +10,7 @@
 
 resource "null_resource" "webapp1" {
   provisioner "local-exec" {
-    command = "./update.sh"
+    command = "printenv"
   }
 }
 
