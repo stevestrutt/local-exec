@@ -10,7 +10,7 @@
 
 resource "null_resource" "webapp1" {
   provisioner "local-exec" {
-    command = "printenv; python3 --version"
+    command = "printenv; python3 --version; ansible --version"
   }
 }
 
