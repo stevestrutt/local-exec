@@ -14,6 +14,17 @@ resource "null_resource" "webapp1" {
   }
 }
 
+data "external" "env" {
+  program = ["jq", "-n", "env"]
+  query = {
+    id = "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID"
+  }
+
+  output "workspace_id" {
+  value = data.external.env.result
+}
+  
+
 # data "ibm_schematics_workspace" "test" {
 #   workspace_id = "apache-03-31-2020-mujeeb-739e8590-b49f-47"
 #   #workspace_id = "myworkspace-4may1-6a4d3963-a74d-4c"
