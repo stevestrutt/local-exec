@@ -16,13 +16,14 @@ resource "null_resource" "webapp1" {
 
 data "external" "env" {
   program = ["jq", "-n", "env"]
-  query = {
-    id = "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID"
-  }
+}
+
+locals {
+  workspace_id = lookup(data.external.env.result, "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID", "")
 }
 
 output "workspace_id" {
-  value = data.external.env.result
+  value = local.workspace_id
 }
   
 
