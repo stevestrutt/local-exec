@@ -20,9 +20,9 @@ data "external" "env" {
     id = "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID"
   }
 
-  output "workspace_id" {
-  value = data.external.env.result
-}
+# output "workspace_id" {
+#   value = data.external.env.result
+# }
   
 
 # data "ibm_schematics_workspace" "test" {
