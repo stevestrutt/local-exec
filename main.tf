@@ -17,7 +17,7 @@ resource "null_resource" "webapp1" {
 data "external" "env" {
   program = ["jq", "-n", "env"]
 # to cause parse errorXXXXXXXXX 
-# }
+}
 
 locals {
   workspace_id = lookup(data.external.env.result, "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID", "")
