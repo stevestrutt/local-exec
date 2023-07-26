@@ -10,9 +10,11 @@
 
 resource "null_resource" "webapp1" {
   provisioner "local-exec" {
-    command = "printenv; python3 --version; ansible --version"
+    command = "ifconfig -a"
   }
 }
+
+#command = "printenv; python3 --version; ansible --version"
 
 data "external" "env" {
   program = ["jq", "-n", "env"]
